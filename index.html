@@ -28,7 +28,6 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-snap-type: y proximity;
     }
 
     body {
@@ -60,13 +59,12 @@
       padding: 0 2rem;
     }
 
-    /* Shared section base — sticky + snap */
+    /* Shared section base — sticky stack */
     .section {
       min-height: 100vh;
       padding: 7rem 0;
       position: sticky;
       top: 0;
-      scroll-snap-align: start;
     }
 
     .section--blue  { background: var(--blue); }
@@ -129,7 +127,7 @@
     .btn--blue-on-blue {
       background: transparent;
       color: var(--white);
-      border-color: rgba(255,255,255,0.6);
+      border-color: var(--white);
     }
     .btn--blue-on-blue:hover {
       background: var(--white);
@@ -228,7 +226,6 @@
       min-height: 100vh;
       position: sticky;
       top: 0;
-      scroll-snap-align: start;
       background-color: var(--black);
       background-image: url('assets/philosopher.png');
       background-size: cover;
@@ -325,7 +322,6 @@
       min-height: 100vh;
       position: sticky;
       top: 0;
-      scroll-snap-align: start;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -380,12 +376,12 @@
     .client-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
     }
 
     .client-card {
       padding: 2.2rem 2rem;
-      border-right: 1px solid rgba(255,255,255,0.1);
+      border-right: 1px solid rgba(255,255,255,0.15);
       transition: background 0.25s;
     }
     .client-card:last-child { border-right: none; }
@@ -499,7 +495,7 @@
 
     .era {
       padding: 2.4rem 2rem;
-      border-right: 1px solid rgba(255,255,255,0.08);
+      border-right: 1px solid rgba(255,255,255,0.14);
     }
     .era:last-child { border-right: none; }
 
@@ -552,7 +548,6 @@
       min-height: 100vh;
       position: sticky;
       top: 0;
-      scroll-snap-align: start;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
@@ -600,7 +595,7 @@
     .scenario-list {
       display: flex;
       flex-direction: column;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
     }
 
     .scenario {
@@ -608,7 +603,7 @@
       grid-template-columns: 2.5rem 1fr;
       gap: 2rem;
       padding: 2.4rem;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.14);
       transition: background 0.2s;
       align-items: start;
     }
@@ -695,7 +690,7 @@
     /* ── FOOTER ── */
     #footer {
       background: var(--black);
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 2px solid rgba(255,255,255,0.12);
       padding: 3rem 0;
       position: sticky;
       top: 0;
@@ -746,7 +741,7 @@
       .client-card:last-child { border-bottom: none; }
       .chris-inner   { grid-template-columns: 1fr; gap: 2.5rem; }
       .eras          { grid-template-columns: 1fr; }
-      .era           { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
+      .era           { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.14); }
       .era:last-child { border-bottom: none; }
       .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links     { display: none; }
