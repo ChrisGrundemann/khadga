@@ -468,7 +468,7 @@
       margin-bottom: 2rem;
     }
 
-    .chris-body p {
+    .chris-body-p {
       font-family: var(--font-body);
       font-weight: 400;
       font-size: 1rem;
@@ -476,6 +476,7 @@
       color: rgba(255,255,255,0.80);
       margin-bottom: 1.3rem;
     }
+    .chris-body-p:last-child { margin-bottom: 0; }
 
     .chris-quote {
       border-left: 3px solid var(--blue);
@@ -507,15 +508,13 @@
       align-items: center;
     }
 
-    .contact-label { color: rgba(255,255,255,0.65); }
-
     .contact-headline {
       font-family: var(--font-head);
       font-size: clamp(2.2rem, 4vw, 3.8rem);
       text-transform: uppercase;
       line-height: 1.05;
       color: var(--white);
-      margin: 1.2rem 0 1.2rem;
+      margin: 0 0 1.2rem;
     }
 
     .contact-body {
@@ -888,59 +887,55 @@
       <div class="chris-grid">
         <div class="chris-photo">
           <img src="assets/chris.svg" alt="Chris Grundemann" width="1200" height="1200" />
+          <div class="chris-quote">
+            <p>
+              &ldquo;His ability to cut through the noise and see the relevant elements and data
+              in any situation is remarkable. He absorbs and synthesizes data quickly, finds
+              the leverage points, focuses on what matters, and delivers results.&rdquo;<br />
+              &mdash; Andy Fisher, Founder &amp; CEO, Myriad360
+            </p>
+          </div>
+          <div class="chris-quote">
+            <p>
+              &ldquo;Chris has the vision to shape the direction of IP networks, from both a
+              business and technical perspective, and has demonstrated the ability to
+              present and defend his vision at every level within an organization.&rdquo;<br />
+              &mdash; Bill Lake, Director of Sales, Nokia
+            </p>
+          </div>
         </div>
         <div class="chris-content">
           <h2 class="chris-name" id="chris-head">Chris Grundemann</h2>
           <p class="chris-title">Founder &amp; Principal Advisor</p>
-          <div class="chris-body">
-            <p>
-              My edge is simple: I learn fast and synthesize well. Walk me into a complex
-              situation &mdash; two networks that need to become one, a fiber asset that needs to
-              become a business, an infrastructure acquisition that needs to realize its value
-              &mdash; and I can hold the technical details, the organizational dynamics, and the
-              commercial consequences in the same frame at the same time.
-            </p>
-            <p>
-              That&rsquo;s not common. Most people who can configure a router can&rsquo;t read a cap
-              table. Most people who can redesign an org chart have never designed a network.
-              I&rsquo;ve spent twenty years doing all three &mdash; building networks, companies, and
-              communities.
-            </p>
-            <p>
-              I co-founded IX-Denver, the largest internet exchange in the Rocky Mountain
-              region. I founded the Network Automation Forum and organize AutoCon, the
-              industry&rsquo;s leading conference on network automation. I serve as Chair of the
-              OIX Association, focused on open standards for interconnection and digital
-              infrastructure. I&rsquo;ve been a network architect at scale, a research analyst,
-              a startup co-founder, and an advisor to operators across four continents.
-            </p>
-            <p>
-              I hold 8 patents in network technology, have published two books on IPv6 with
-              Juniper Networks, and contributed to IETF standards including RFC 7422.
-            </p>
-            <p>
-              What ties all of it together: the ability to walk into a room full of
-              information and noise, find the real problem, and chart a path through it.
-            </p>
-
-            <div class="chris-quote">
-              <p>
-                &ldquo;His ability to cut through the noise and see the relevant elements and data
-                in any situation is remarkable. He absorbs and synthesizes data quickly, finds
-                the leverage points, focuses on what matters, and delivers results.&rdquo;<br />
-                &mdash; Andy Fisher, Founder &amp; CEO, Myriad360
-              </p>
-            </div>
-
-            <div class="chris-quote">
-              <p>
-                &ldquo;Chris has the vision to shape the direction of IP networks, from both a
-                business and technical perspective, and has demonstrated the ability to
-                present and defend his vision at every level within an organization.&rdquo;<br />
-                &mdash; Bill Lake, Director of Sales, Nokia
-              </p>
-            </div>
-          </div>
+          <p class="chris-body-p">
+            My edge is simple: I learn fast and synthesize well. Walk me into a complex
+            situation &mdash; two networks that need to become one, a fiber asset that needs to
+            become a business, an infrastructure acquisition that needs to realize its value
+            &mdash; and I can hold the technical details, the organizational dynamics, and the
+            commercial consequences in the same frame at the same time.
+          </p>
+          <p class="chris-body-p">
+            That&rsquo;s not common. Most people who can configure a router can&rsquo;t read a cap
+            table. Most people who can redesign an org chart have never designed a network.
+            I&rsquo;ve spent twenty years doing all three &mdash; building networks, companies, and
+            communities.
+          </p>
+          <p class="chris-body-p">
+            I co-founded IX-Denver, the largest internet exchange in the Rocky Mountain
+            region. I founded the Network Automation Forum and organize AutoCon, the
+            industry&rsquo;s leading conference on network automation. I serve as Chair of the
+            OIX Association, focused on open standards for interconnection and digital
+            infrastructure. I&rsquo;ve been a network architect at scale, a research analyst,
+            a startup co-founder, and an advisor to operators across four continents.
+          </p>
+          <p class="chris-body-p">
+            I hold 8 patents in network technology, have published two books on IPv6 with
+            Juniper Networks, and contributed to IETF standards including RFC 7422.
+          </p>
+          <p class="chris-body-p">
+            What ties all of it together: the ability to walk into a room full of
+            information and noise, find the real problem, and chart a path through it.
+          </p>
         </div>
       </div>
     </div>
@@ -951,7 +946,6 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-left">
-          <p class="t-label contact-label">Start Here</p>
           <h2 class="contact-headline" id="contact-head">Start with a conversation.</h2>
           <p class="contact-body">
             Every Khadga engagement begins the same way: a direct, unhurried conversation
