@@ -225,8 +225,6 @@
       color: var(--black);
     }
 
-    .problem-label { color: var(--blue); }
-
     .problem-headline {
       font-family: var(--font-head);
       font-size: clamp(2.2rem, 4vw, 4rem);
@@ -234,7 +232,7 @@
       text-transform: uppercase;
       color: var(--black);
       max-width: 840px;
-      margin: 1.2rem 0 2.5rem;
+      margin: 0 0 2.5rem;
     }
 
     .problem-body p {
@@ -255,12 +253,23 @@
       color: var(--white);
     }
 
-    .reframe-label { color: rgba(255,255,255,0.65); }
-
-    .reframe-logo {
-      margin: 1.5rem 0 2.5rem;
+    .reframe-inner {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      gap: 4rem;
+      align-items: center;
     }
-    .reframe-logo img { height: 100px; width: auto; }
+
+    .reframe-logo-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .reframe-logo-col img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+    }
 
     .reframe-headline {
       font-family: var(--font-head);
@@ -278,7 +287,6 @@
       font-size: 1rem;
       line-height: 1.75;
       color: rgba(255,255,255,0.85);
-      max-width: 720px;
     }
 
     .reframe-body p { margin-bottom: 1.4rem; }
@@ -347,7 +355,7 @@
       border-left: 3px solid var(--blue);
       border-right: none;
       padding-left: calc(2rem - 3px);
-      background: rgba(4,70,241,0.05);
+      background: rgba(4,70,241,0.14);
     }
 
     /* ── WHO THIS IS FOR ── */
@@ -357,8 +365,6 @@
       color: var(--black);
     }
 
-    .for-label { color: var(--blue); }
-
     .for-headline {
       font-family: var(--font-head);
       font-size: clamp(2.2rem, 4vw, 4rem);
@@ -366,7 +372,7 @@
       text-transform: uppercase;
       color: var(--black);
       max-width: 840px;
-      margin: 1.2rem 0 3rem;
+      margin: 0 0 3rem;
     }
 
     .for-columns {
@@ -408,9 +414,12 @@
     }
 
     .for-catchall {
-      padding-top: 2.5rem;
-      margin-top: 0.5rem;
-      border-top: 1px solid rgba(10,10,10,0.12);
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+    .for-catchall .for-list {
+      max-width: 640px;
     }
 
     .for-catchall .for-list li span {
@@ -426,14 +435,11 @@
       color: var(--white);
     }
 
-    .chris-label { color: var(--blue); }
-
     .chris-grid {
       display: grid;
       grid-template-columns: 320px 1fr;
       gap: 5rem;
       align-items: start;
-      margin-top: 1.5rem;
     }
 
     .chris-photo img {
@@ -599,6 +605,12 @@
       .nav-links  { display: none; }
       .nav-toggle { display: flex; }
 
+      .reframe-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .reframe-logo-col img { max-width: 200px; }
+
       .eras-grid {
         grid-template-columns: 1fr;
       }
@@ -651,7 +663,7 @@
   <nav id="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo" aria-label="Khadga Consulting home">
-        <img src="assets/Khadga_wht.png" alt="Khadga Consulting" width="800" height="500" />
+        <img src="assets/Khadga_wht.png" alt="Khadga Consulting" />
       </a>
       <div class="nav-links">
         <a href="#chris">About</a>
@@ -690,8 +702,7 @@
   <!-- ── THE REAL PROBLEM ── -->
   <section id="problem" aria-labelledby="problem-head">
     <div class="container">
-      <p class="t-label problem-label">The Problem</p>
-      <h2 class="problem-headline" id="problem-head">The hardest network problems aren&rsquo;t just network problems.</h2>
+      <h2 class="problem-headline" id="problem-head">The hardest network problems aren&rsquo;t <span style="color: var(--blue);">just</span> network problems.</h2>
       <div class="problem-body">
         <p>
           You bring in a network engineer and they see a network problem. You bring in
@@ -719,27 +730,30 @@
   <!-- ── REFRAME: KHADGA STORY ── -->
   <section id="reframe" aria-labelledby="reframe-head">
     <div class="container">
-      <p class="t-label reframe-label">Our Perspective</p>
-      <div class="reframe-logo">
-        <img src="assets/Logo_wht.png" alt="Khadga Consulting" width="800" height="500" />
-      </div>
-      <h2 class="reframe-headline" id="reframe-head">The sword cuts through. So do we.</h2>
-      <div class="reframe-body">
-        <p>
-          Khadga <span class="pronunciation">(KHA-d-juh)</span> is the Sanskrit word for sword. But we&rsquo;re not named after
-          just any sword. The Prajna Khadga is the flaming sword of knowledge wielded by
-          Manjushri &mdash; the bodhisattva of wisdom, who uses it to cut through ignorance.
-          A parallel figure in Western mythology is Prometheus, who stole fire from the
-          gods and gave it to us humans. The act in both cases is the same: knowledge
-          that was inaccessible becomes available. Clarity replaces confusion. Things
-          that seemed immovable start to move.
-        </p>
-        <p>
-          The wisdom Khadga shares is specific to network infrastructure &mdash; how to build,
-          operate, and grow networks for the greatest possible business advantage. The
-          ignorance we cut through is the assumption that doing so is a technology-only
-          challenge.
-        </p>
+      <div class="reframe-inner">
+        <div class="reframe-logo-col">
+          <img src="assets/Logo_wht.png" alt="Khadga Consulting" />
+        </div>
+        <div class="reframe-text-col">
+          <h2 class="reframe-headline" id="reframe-head">The sword cuts through.<br />So do we.</h2>
+          <div class="reframe-body">
+            <p>
+              Khadga <span class="pronunciation">(KHA-d-juh)</span> is the Sanskrit word for sword. But we&rsquo;re not named after
+              just any sword. The Prajna Khadga is the flaming sword of knowledge wielded by
+              Manjushri &mdash; the bodhisattva of wisdom, who uses it to cut through ignorance.
+              A parallel figure in Western mythology is Prometheus, who stole fire from the
+              gods and gave it to us humans. The act in both cases is the same: knowledge
+              that was inaccessible becomes available. Clarity replaces confusion. Things
+              that seemed immovable start to move.
+            </p>
+            <p>
+              The wisdom Khadga shares is specific to network infrastructure &mdash; how to build,
+              operate, and grow networks for the greatest possible business advantage. The
+              ignorance we cut through is the assumption that doing so is a technology-only
+              challenge.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -747,7 +761,7 @@
   <!-- ── REFRAME: THREE ERAS ── -->
   <section id="eras" aria-labelledby="eras-head">
     <div class="container">
-      <h2 class="eras-headline" id="eras-head">This work has never mattered more than it does right now.</h2>
+      <h2 class="eras-headline" id="eras-head">This work has never mattered <span style="color: var(--blue);">more</span> than it does right now.</h2>
       <div class="eras-grid">
         <div class="era">
           <div class="era-title">The First Era</div>
@@ -787,7 +801,6 @@
   <!-- ── WHO THIS IS FOR ── -->
   <section id="for" aria-labelledby="for-head">
     <div class="container">
-      <p class="t-label for-label">Who This Is For</p>
       <h2 class="for-headline" id="for-head">The third era brings challenges and opportunities:</h2>
 
       <div class="for-columns">
@@ -872,7 +885,6 @@
   <!-- ── CHRIS ── -->
   <section id="chris" aria-labelledby="chris-head">
     <div class="container">
-      <p class="t-label chris-label">Principal Advisor</p>
       <div class="chris-grid">
         <div class="chris-photo">
           <img src="assets/chris.svg" alt="Chris Grundemann" width="1200" height="1200" />
@@ -928,8 +940,6 @@
                 &mdash; Bill Lake, Director of Sales, Nokia
               </p>
             </div>
-
-            <a href="https://chrisgrundemann.com/meet" class="btn" target="_blank" rel="noopener" style="margin-top: 0.8rem;">Book an Introductory Call</a>
           </div>
         </div>
       </div>
@@ -963,7 +973,7 @@
   <footer id="footer" role="contentinfo">
     <div class="footer-inner">
       <a href="#hero" class="footer-logo" aria-label="Back to top">
-        <img src="assets/Khadga_wht.png" alt="Khadga Consulting" width="800" height="500" />
+        <img src="assets/Khadga_wht.png" alt="Khadga Consulting" />
       </a>
       <p class="footer-tagline">Networks are businesses. We treat them that way.</p>
       <nav class="footer-links" aria-label="Footer navigation">
