@@ -280,32 +280,31 @@
       color: var(--white);
     }
 
-    .reframe-inner {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .reframe-logo-col {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .reframe-logo-col img {
-      width: 100%;
-      max-width: 180px;
-      height: auto;
-    }
-
     .reframe-headline {
       font-family: var(--font-head);
       font-size: clamp(2.2rem, 4vw, 4rem);
       line-height: 1.05;
       text-transform: uppercase;
       color: var(--white);
-      max-width: 840px;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .reframe-cols {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .reframe-mark-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .reframe-mark-col img {
+      width: 100%;
+      max-width: 260px;
+      height: auto;
     }
 
     .reframe-body {
@@ -642,11 +641,12 @@
       .nav-links  { display: none; }
       .nav-toggle { display: flex; }
 
-      .reframe-inner {
+      .reframe-cols {
         grid-template-columns: 1fr;
         gap: 2.5rem;
       }
-      .reframe-logo-col img { max-width: 200px; }
+      .reframe-mark-col { justify-content: center; }
+      .reframe-mark-col img { max-width: 180px; }
 
       .eras-grid {
         grid-template-columns: 1fr;
@@ -767,29 +767,27 @@
   <!-- ── REFRAME: KHADGA STORY ── -->
   <section id="reframe" aria-labelledby="reframe-head">
     <div class="container">
-      <div class="reframe-inner">
-        <div class="reframe-logo-col">
+      <h2 class="reframe-headline" id="reframe-head">The sword cuts through.<br />So do we.</h2>
+      <div class="reframe-cols">
+        <div class="reframe-mark-col">
           <img src="assets/Mark_wht.png" alt="Khadga Consulting" />
         </div>
-        <div class="reframe-text-col">
-          <h2 class="reframe-headline" id="reframe-head">The sword cuts through.<br />So do we.</h2>
-          <div class="reframe-body">
-            <p>
-              Khadga <span class="pronunciation">(KHA-d-juh)</span> is the Sanskrit word for sword. But we&rsquo;re not named after
-              just any sword. The Prajna Khadga is the flaming sword of knowledge wielded by
-              Manjushri &mdash; the bodhisattva of wisdom, who uses it to cut through ignorance.
-              A parallel figure in Western mythology is Prometheus, who stole fire from the
-              gods and gave it to us humans. The act in both cases is the same: knowledge
-              that was inaccessible becomes available. Clarity replaces confusion. Things
-              that seemed immovable start to move.
-            </p>
-            <p>
-              The wisdom Khadga shares is specific to network infrastructure &mdash; how to build,
-              operate, and grow networks for the greatest possible business advantage. The
-              ignorance we cut through is the assumption that doing so is a technology-only
-              challenge.
-            </p>
-          </div>
+        <div class="reframe-body">
+          <p>
+            Khadga <span class="pronunciation">(KHA-d-juh)</span> is the Sanskrit word for sword. But we&rsquo;re not named after
+            just any sword. The Prajna Khadga is the flaming sword of knowledge wielded by
+            Manjushri &mdash; the bodhisattva of wisdom, who uses it to cut through ignorance.
+            A parallel figure in Western mythology is Prometheus, who stole fire from the
+            gods and gave it to us humans. The act in both cases is the same: knowledge
+            that was inaccessible becomes available. Clarity replaces confusion. Things
+            that seemed immovable start to move.
+          </p>
+          <p>
+            The wisdom Khadga shares is specific to network infrastructure &mdash; how to build,
+            operate, and grow networks for the greatest possible business advantage. The
+            ignorance we cut through is the assumption that doing so is a technology-only
+            challenge.
+          </p>
         </div>
       </div>
     </div>
